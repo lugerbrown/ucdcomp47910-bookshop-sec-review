@@ -101,7 +101,8 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,NULL,NULL,NULL,'Admin User','111adminpowershopefullywork111',NULL,'ADMIN',NULL,'admin'),(2,'123 road','2000-10-01','jlaz@gmail.com','justin','0000','1234567890','CUSTOMER','lazarev','jlaz');
+INSERT INTO `user` (id, address, date_of_birth, email, name, password, phone, role, surname, username)
+VALUES (1,NULL,NULL,NULL,'Admin User','111adminpowershopefullywork111',NULL,'ADMIN',NULL,'admin'),(2,'123 road','2000-10-01','jlaz@gmail.com','justin','0000','1234567890','CUSTOMER','lazarev','jlaz');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
