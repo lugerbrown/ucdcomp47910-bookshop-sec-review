@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: bookshop-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: RootPass123!
+      MYSQL_DATABASE: bookshopdb
+      MYSQL_USER: bookshop
+      MYSQL_PASSWORD: BookShop456!
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./scripts/bookshopdb_10567499.sql:/docker-entrypoint-initdb.d/01-init-database.sql
+    networks:
+      - bookshop-network
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  bookshop-network:
+    driver: bridge
