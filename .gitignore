@@ -35,3 +35,48 @@ build/
 .idea
 
 node_modules/
+
+### LaTeX ###
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.ist
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+*.ps
+*.eps
+
+# LaTeX temporary and backup files
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+
+# PDF files (exclude all PDFs except specific ones in docs)
+*.pdf
+!docs/UCD_Logo.pdf
+!docs/vulnerabilityReport_23202882.pdf
